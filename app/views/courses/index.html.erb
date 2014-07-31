@@ -1,0 +1,24 @@
+<h1>Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @courses.each do |course| %>
+    <tr>
+          <td><%= course.name %></td>
+          <td><button><a href="/courses/<%= course.id %>">Show</a></button></td>
+          <td><button><a href="/courses/<%= course.id %>/edit">Edit</a></button></td>
+          <td><button><a href="/courses/<%= course.id %>/destroy">Destroy</a></button></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

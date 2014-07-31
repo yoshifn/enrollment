@@ -1,0 +1,13 @@
+<h1>Course Student #<%= @course_student.id %></h1>
+
+<div>
+  <strong>Course</strong>:<br />
+  <p><%= @course_student.course_id %></p>
+</div>
+<div>
+  <strong>Student</strong>:<br />
+  <p><%= @course_student.student_id %></p>
+</div>
+
+<button><a href="/course_students/<%= @course_student.id %>/edit">Edit</a></button>
+<button><a href="/course_students/<%= @course_student.id %>/destroy">Destroy</a></button>

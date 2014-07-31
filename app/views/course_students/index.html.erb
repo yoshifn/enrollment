@@ -1,0 +1,26 @@
+<h1>Enrollments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Student</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @course_students.each do |course_student| %>
+    <tr>
+      <td><%= course_student.course.name %></td>
+      <td><%= course_student.student.name %></td>
+      <td><button><a href="/course_students/<%= course_student.id %>">Show</a></button></td>
+      <td><button><a href="/course_students/<%= course_student.id %>/edit">Edit</a></button></td>
+      <td><button><a href="/course_students/<%= course_student.id %>/destroy">Destroy</a></button></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

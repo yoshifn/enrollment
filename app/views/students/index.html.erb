@@ -1,0 +1,24 @@
+<h1>Students</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @students.each do |student| %>
+    <tr>
+          <td><%= student.name %></td>
+          <td><%= student.email %></td>
+          <td><button><a href="/students/<%= student.id %>">Show</a></button></td>
+          <td><button><a href="/students/<%= student.id %>/edit">Edit</a></button></td>
+          <td><button><a href="/students/<%= student.id %>/destroy">Destroy</a></button></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
